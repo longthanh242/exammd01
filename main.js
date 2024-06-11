@@ -14,7 +14,7 @@ function addUser() {
         return;
     }
     for (let i = 0; i < users.length; i++) {
-        if (users[i].email === emailInput || users[i].code === code) {
+        if (users[i].email === emailInput || users[i].code === codeInput) {
             alert("Mã nhân viên hoặc email không được trùng");
             return false;
         }
@@ -69,22 +69,17 @@ function deleteUser(id) {
 
 function changeUser(id) {
     let findUser = users.filter(item => item.id == id);
-    // console.log(findUser);
+    console.log(findUser);
     let newCode = document.querySelector('#code').value = findUser[0].code;
     let newName = document.querySelector('#name').value = findUser[0].name;
     let newEmail = document.querySelector('#email').value = findUser[0].email;
     document.getElementsByTagName('h3')[0].innerHTML = 'Update Employee';
     document.getElementById('btn').innerHTML = 'Update Employee';
-    let idUpdate = id;
-    let isUpdate = true;
-    // let user = {
-    //     id: Math.floor(Math.random()*1000),
-    //     code: newCode,
-    //     name: newName,
-    //     email: newEmail
-    // };
-    // users.push(user);
-    // localStorage.setItem('users', JSON.stringify(users));
-    // let updateUser = '';
-    // renderUser();
+//     if (users[i].id === id) {
+//         document.querySelector('#code').value;
+//         document.querySelector('#name').value;
+//         document.querySelector('#email').value;
+//     }
+//     localStorage.setItem('users', JSON.stringify(users));
+//     renderUser();
 }
