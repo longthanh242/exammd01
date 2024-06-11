@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="input-text">
+            <h3>Add Employee</h3>
+            <label for="">Employee code</label><br>
+            <input type="text" name="" id="code"><br>
+            <label for="">Employee name</label><br>
+            <input type="text" name="" id="name"><br>
+            <label for="">Email</label><br>
+            <input type="email" name="" id="email"><br>
+            <button onclick="addUser()" id="btn">Add Employee</button>
+        </div>
+
+        <div class="table">
+            <h3>Employee List</h3>
+            <table id="user-list">
+                <thead>
+                    <tr>
+                        <th>STT</th>
+                        <th>Employee code</th>
+                        <th>Employee name</th>
+                        <th>Email</th>
+                        <th>Option</th>
+                    </tr>
+                </thead>
+                <tbody id="tbodyEle"></tbody>
+            </table>
+        </div>
+    </div>
+    <script src="./main.js"></script>
+</body>
+</html>
